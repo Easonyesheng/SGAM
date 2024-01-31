@@ -2,7 +2,7 @@
  * @Author: EasonZhang
  * @Date: 2024-01-11 21:41:08
  * @LastEditors: EasonZhang
- * @LastEditTime: 2024-01-17 19:13:44
+ * @LastEditTime: 2024-01-31 14:42:16
  * @FilePath: /SGAM/README.md
  * @Description: ReadMe
  * 
@@ -11,19 +11,20 @@
 # SGAM
 This is the the offical code release for the paper: `Searching from Area to Point: A Semantic Guided Framework  with Geometric Consistency for Accurate Feature Matching', by Yesheng Zhang and Xu Zhao and Dahong Qian.
 
-![MainFig](./assets/QRExp.png)
+![MainFig](./assets/FAPM.jpg)
 
 # TODO
-<!-- - [ ] Main module Code release
+- [ ] Main Code release
     - [x] SAM
-    - [ ] GAM
-    - [ ] SGAM
-- [ ] Demo Code release -->
+    - [x] GAM
+- [ ] Demo Code construction
 - [ ] ReadMe Complete
 
 
 # Qualitative Results
-From top to bottom: `SGAM`, `SGAM_ASpan`, `ASpan`.
-
+- On challenging scenes.
+![Qua](./assets/QRExp.png)
+---
+- Continuous matching results; from top to bottom: `SGAM`, `SGAM_ASpan`, `ASpan`.
 ![gif1](./assets/QR1.gif)
 
