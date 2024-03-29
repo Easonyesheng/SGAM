@@ -28,3 +28,14 @@ This is the the offical code release for the paper: `Searching from Area to Poin
 - Continuous matching results; from top to bottom: `SGAM`, `SGAM_ASpan`, `ASpan`.
 ![gif1](./assets/QR1.gif)
 
+# Citation
+If you find this code helpful, please cite:
+
+```
+@article{zhang2023searching,
+  title={Searching from Area to Point: A Hierarchical Framework for Semantic-Geometric Combined Feature Matching},
+  author={Zhang, Yesheng and Zhao, Xu and Qian, Dahong},
+  journal={arXiv preprint arXiv:2305.00194},
+  year={2023}
+}
+```
