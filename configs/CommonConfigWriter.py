@@ -1,8 +1,8 @@
 '''
 Author: your name
 Date: 2022-10-22 12:14:21
-LastEditTime: 2024-01-17 20:53:44
-LastEditors: EasonZhang
+LastEditTime: 2024-06-05 14:47:33
+LastEditors: Easonyesheng preacher@sjtu.edu.cn
 Description: Write configs for SAMer, GAMer, PMer and SGAMer, not scene specific
 FilePath: /SGAM/configs/CommonConfigWriter.py
 '''
@@ -87,7 +87,7 @@ def args4SGAM():
     parser.add_argument("--area-match-num", type=int, default=500, help="standard corrs number in GeoAM")
     parser.add_argument("--rejection-mode", default=1, type=int, help="choice: 0. non-rejection; 1. geo_consist; 2. RANSAC;")
     parser.add_argument("--inlier-thd-mode", type=int, default=0, help="0. average;")
-    parser.add_argument('--alpha_list', type=float, nargs='+', help='<Required> Set flag', required=True)
+    parser.add_argument('--alpha_list', type=float, nargs='+', help='<Required> Set flag', required=False)
     parser.add_argument("--filter_area_num", type=int, default=1, help="area num thd for filter")
     parser.add_argument("--adaptive-size-thd", type=float, default=0.2, help="adaptive size thd for adaptive A2PM point collection")
     parser.add_argument("--draw-adap", type=int, default=0, help="draw adaptive A2PM point collection")

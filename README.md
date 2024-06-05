@@ -1,8 +1,8 @@
 <!--
  * @Author: EasonZhang
  * @Date: 2024-01-11 21:41:08
- * @LastEditors: EasonZhang
- * @LastEditTime: 2024-01-31 14:42:16
+ * @LastEditors: Easonyesheng preacher@sjtu.edu.cn
+ * @LastEditTime: 2024-06-05 16:28:41
  * @FilePath: /SGAM/README.md
  * @Description: ReadMe
  * 
@@ -13,13 +13,6 @@ This is the the offical code release for the paper: `Searching from Area to Poin
 
 ![MainFig](./assets/FAPM.jpg)
 
-# TODO
-- [ ] Main Code release
-    - [x] SAM
-    - [x] GAM
-- [ ] Demo Code construction
-- [ ] ReadMe Complete
-
 
 # Qualitative Results
 - On challenging scenes.
@@ -28,10 +21,69 @@ This is the the offical code release for the paper: `Searching from Area to Poin
 - Continuous matching results; from top to bottom: `SGAM`, `SGAM_ASpan`, `ASpan`.
 ![gif1](./assets/QR1.gif)
 
+
+# TODO
+- [ ] Main Code release
+    - [x] SAM
+    - [x] GAM
+- [ ] Demo Code construction
+    - [x] SAM Demo @ 2024-06-05
+    - [ ] SGAM demo
+- [ ] ReadMe Complete
+
+# Environment Configuration
+
+## torch
+You can install torch like:
+```shell
+    conda create -n sgam_aspan python==3.8
+    conda activate sgam_aspan
+    pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
+```
+
+## other packages
+```shell
+    pip install -r requirements.txt
+```
+
+## configuration for point matcher
+
+Point matchers including [SuperPoint](https://github.com/magicleap/SuperPointPretrainedNetwork), [SuperGlue](https://github.com/magicleap/SuperGluePretrainedNetwork), [ASpanFormer](https://github.com/apple/ml-aspanformer), [LoFTR](https://github.com/zju3dv/LoFTR), [QuadTree](https://github.com/Tangshitao/QuadTreeAttention) and [DKM](https://github.com/Parskatt/DKM) can share the same conda environment.
+
+## ASpanFormer
+Please follow the instructions in [ASpanFormer](https://github.com/apple/ml-aspanformer).
+
+
+# Demo
+
+## Semantic Area Matching Demo
+
+The demo for semantic area matching is provided in `./demo/semantic_area_match_demo.py`.
+
+You can directly run it as:
+
+``` shell
+    python semantic_area_match_demo.py
+```
+
+This will match the image `0.jpg` with `5.jpg`, which are provided in `/opt/data/private/SGAM/demo/demo_data`, using the ground truth semantic labels.
+ The image selection can be adjusted in the script:
+    
+``` python
+    SAMer_cfg = assemble_config_with_scene_pair(SAMer_cfg, scene="scene0002_00", pair0="0", pair1="5", out_path="")
+```
+
+After running, the results can be found in `demo/demo_sam_res`, including area matches, doubtful area pairs, semantic object areas and semantic intersection areas, like we provided.
+
+The code for combination of [SEEM](https://github.com/UX-Decoder/Segment-Everything-Everywhere-All-At-Once) will be released soon.
+
+## SGAM Demo
+> We are still working on the SGAM demo, including refactoring the code due to the complexity of the configuration of SGAM. We will release the code soon.
+
 # Citation
 If you find this code helpful, please cite:
 
-```
+``` txt
 @article{zhang2023searching,
   title={Searching from Area to Point: A Hierarchical Framework for Semantic-Geometric Combined Feature Matching},
   author={Zhang, Yesheng and Zhao, Xu and Qian, Dahong},
@@ -39,3 +91,7 @@ If you find this code helpful, please cite:
   year={2023}
 }
 ```
+
+# Aknowledgement
+
+We thank the authors of [SuperPoint](https://github.com/magicleap/SuperPointPretrainedNetwork), [SuperGlue](https://github.com/magicleap/SuperGluePretrainedNetwork), [ASpanFormer](https://github.com/apple/ml-aspanformer), [LoFTR](https://github.com/zju3dv/LoFTR), [QuadTree](https://github.com/Tangshitao/QuadTreeAttention) and [DKM](https://github.com/Parskatt/DKM) for their great works.

@@ -1,8 +1,8 @@
 '''
 Author: your name
 Date: 2022-08-19 11:04:54
-LastEditTime: 2024-01-17 20:32:52
-LastEditors: EasonZhang
+LastEditTime: 2024-06-05 14:32:07
+LastEditors: Easonyesheng preacher@sjtu.edu.cn
 Description: Area matcher through pure semantic
 FilePath: /SGAM/models/SemAreaMatcher.py
 '''
@@ -71,40 +71,6 @@ class RawSemAreaMatcher(object):
         self.color0, self.scale0 = load_cv_img_resize(configs["color_path0"], configs["W"], configs["H"], 1)
         self.color1, self.scale1 = load_cv_img_resize(configs["color_path1"], configs["W"], configs["H"], 1)
 
-        if datasetName == "ScanNet" or datasetName == "MatterPort3D":
-            self.depth0 = load_cv_depth(configs["depth0"])
-            self.depth1 = load_cv_depth(configs["depth1"])
-            self.depth_factor = configs["depth_factor"]
-            self.K0 = load_K_txt(configs["K0_path"], self.scale0)
-            self.K1 = load_K_txt(configs["K1_path"], self.scale1)
-            self.pose0 = load_pose_txt(configs["pose_path0"])
-            self.pose1 = load_pose_txt(configs["pose_path1"])
-        elif datasetName == "KITTI":
-            self.depth0 = None
-            self.depth1 = None
-            self.depth_factor = None
-            self.K0 = configs["K0"]
-            self.K1 = configs["K1"]
-            self.pose0 = configs["pose0"]
-            self.pose1 = configs["pose1"]
-        elif datasetName == "YFCC":
-            self.depth0 = None
-            self.depth1 = None
-            self.depth_factor = None
-            self.K0 = configs["K0"]
-            self.K0 = adopt_K(self.K0, self.scale0)
-            self.K1 = configs["K1"]
-            self.K1 = adopt_K(self.K1, self.scale1)
-            self.pose0 = configs["pose0"]
-            # turn ndarray to matrix
-            self.pose0 = np.matrix(self.pose0)
-
-            self.pose1 = configs["pose1"]
-            # turn ndarray to matrix
-            self.pose1 = np.matrix(self.pose1)
-        else:
-            raise NotImplementedError
-        
 
         self.draw_verbose = draw_verbose
         
@@ -2601,18 +2567,6 @@ class RawSemAreaMatcher(object):
 
         cv2.imwrite(os.path.join(self.out_path, "overlap_area_match_res_" + self.name0 + "_" + self.name1 + name + ".jpg"), out)
 
-    def ret_assert_assets(self):
-        """
-        """
-        return self.depth0, self.depth1, self.depth_factor, self.K0, self.K1, self.pose0, self.pose1
-
-    def draw_ori_matches_with_assertion(self, ori_matches, name, thd, draw_flag=False):
-        """
-        """
-        mask, ratio_bad, gt_pts1 = assert_match_reproj(ori_matches, self.depth0, self.depth1, self.depth_factor, self.K0, self.K1, self.pose0, self.pose1, thd)
-        if draw_flag:
-            plot_matches_with_mask_ud(self.color0, self.color1, mask, gt_pts1, ratio_bad, ori_matches, self.out_path, name)
-        return ratio_bad
 
     def collect_doubt_obj_pair(self, doubt_areas0, doubt_areas1):
         """
