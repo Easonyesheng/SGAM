@@ -1,7 +1,7 @@
 '''
 Author: your name
 Date: 2022-09-25 09:26:03
-LastEditTime: 2024-01-27 12:31:29
+LastEditTime: 2024-06-06 23:01:28
 LastEditors: EasonZhang
 Description: Area level outlier rejector
 FilePath: /SGAM/models/GeoAreaMatcher.py
@@ -800,11 +800,11 @@ class PRGeoAreaMatcher(object):
 
                 # write down the scene name for counting 
                 ## change the out_path to its parent folder
-                count_out_path = os.path.dirname(self.out_path)
-                count_out_path = os.path.join(count_out_path, "MMARatios")
-                count_file_path = os.path.join(count_out_path, f"ada_count_{alpha_temp}.txt")
-                with open(count_file_path, "a") as f:
-                    f.write(f"{self.out_path.split('/')[-1]}\n")
+                # count_out_path = os.path.dirname(self.out_path)
+                # count_out_path = os.path.join(count_out_path, "MMARatios")
+                # count_file_path = os.path.join(count_out_path, f"ada_count_{alpha_temp}.txt")
+                # with open(count_file_path, "a") as f:
+                #     f.write(f"{self.out_path.split('/')[-1]}\n")
 
                 # collect inlier corrs from entire image corrs
                 collect_out_area_corrs = []

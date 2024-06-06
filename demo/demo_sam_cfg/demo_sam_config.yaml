@@ -13,7 +13,7 @@ inv_overlap_pyramid_ratio: 8
 label_list_area_thd: 400
 leave_multi_obj_match: 0
 obj_desc_match_thd: 0.5
-out_path: /opt/data/private/SGAM/demo/demo_sam_res
+out_path: /opt/data/private/SGAM/demo/demo_sgam_res
 output_patch_size: 256
 overlap_desc_dist_thd: 0.25
 overlap_radius: 128

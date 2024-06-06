@@ -1,8 +1,8 @@
 '''
 Author: your name
 Date: 2022-10-22 12:14:21
-LastEditTime: 2024-06-05 14:47:33
-LastEditors: Easonyesheng preacher@sjtu.edu.cn
+LastEditTime: 2024-06-06 16:05:51
+LastEditors: EasonZhang
 Description: Write configs for SAMer, GAMer, PMer and SGAMer, not scene specific
 FilePath: /SGAM/configs/CommonConfigWriter.py
 '''

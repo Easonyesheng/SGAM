@@ -1,0 +1,5 @@
+H: 480
+W: 480
+cuda_idx: 0
+depth_factor: 1000
+weights: /opt/data/private/SGAM/Matchers/ASpanFormer/indoor.ckpt
