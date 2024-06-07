@@ -28,7 +28,7 @@ This is the the offical code release for the paper: `Searching from Area to Poin
     - [x] GAM
 - [ ] Demo Code construction
     - [x] SAM Demo @ 2024-06-05
-    - [ ] SGAM demo
+    - [x] SGAM demo @ 2024-06-06
 - [ ] ReadMe Complete
 
 # Environment Configuration
