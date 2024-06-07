@@ -53,6 +53,10 @@ Point matchers including [SuperPoint](https://github.com/magicleap/SuperPointPre
 ## ASpanFormer
 Please follow the instructions in [ASpanFormer](https://github.com/apple/ml-aspanformer).
 
+Note, the environment for ASpanFormer can be shared with the environment for SGAM. That is, you have no need to create a new conda environment for ASpanFormer, but just install the required packages in the same environment `sgam_aspan`. 
+
+Similarly, you can install other aforementioned point matchers in the same environment i.e. `sgam_aspan`.
+
 
 # Demo
 
