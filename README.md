@@ -1,13 +1,8 @@
 <!--
  * @Author: EasonZhang
  * @Date: 2024-01-11 21:41:08
-<<<<<<< HEAD
- * @LastEditors: EasonZhang
- * @LastEditTime: 2024-06-06 23:26:30
-=======
  * @LastEditors: Easonyesheng preacher@sjtu.edu.cn
  * @LastEditTime: 2024-06-05 16:28:41
->>>>>>> cd481957cbd707dc7c4f56698180a364b732cda3
  * @FilePath: /SGAM/README.md
  * @Description: ReadMe
  * 
@@ -104,7 +99,7 @@ After that, the results will be saved in `demo/demo_sgam_res`, including the pre
 The results of GP are shown as below:
 ![SGAM-res0](./demo/demo_sgam_res/scene0002_00_0_5/doubt_match_pred_best_match_area.jpg)
 
-We also report the pose error between the baseline and our SGAM. You should see:
+We also report the pose error between the baseline (ASpanFormer) and our SGAM. You should see:
 ``` shell
 | SUCCESS  | __main__:pose_eval:93 - calc pose with 1000 corrs
 2024-06-06 23:19:32.632 | SUCCESS  | utils.geo:compute_pose_error_simp:1292 - use len=1000 corrs to eval pose err = t-14.6511, R-0.3452
