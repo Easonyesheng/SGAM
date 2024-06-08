@@ -114,6 +114,7 @@ We also report the pose error between the baseline (ASpanFormer) and our SGAM. Y
 ```
 
 In this case, the pose error is reduced from `0.3452` to `0.2458` for rotation and `14.6511` to `10.8309` for translation.
+Note the images in this case come from the training set of ASpanFormer, and SGAM can further improve its performance.
 
 
 # Citation
