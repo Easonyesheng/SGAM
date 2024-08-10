@@ -11,6 +11,8 @@
 # SGAM
 This is the the offical code release for the paper: `Searching from Area to Point: A Semantic Guided Framework  with Geometric Consistency for Accurate Feature Matching', by Yesheng Zhang and Xu Zhao and Dahong Qian.
 
+**See also a refactored version [here](https://github.com/Easonyesheng/A2PM-MESA).**
+
 ![MainFig](./assets/FAPM.jpg)
 
 
