@@ -25,13 +25,13 @@ This is the the offical code release for the paper: `Searching from Area to Poin
 
 
 # TODO
-- [ ] Main Code release
+- [x] Main Code release
     - [x] SAM
     - [x] GAM
-- [ ] Demo Code construction
+- [x] Demo Code construction
     - [x] SAM demo @ 2024-06-05
     - [x] SGAM demo @ 2024-06-06
-- [ ] ReadMe Complete
+- [x] ReadMe Complete
 
 # Environment Configuration
 
