@@ -579,7 +579,8 @@ class RawSemAreaMatcher(object):
             offset = 0
             temp_v_s = max(0, v_min-radius)
             temp_v_e = min(H, v_min+radius)
-            bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e ]
+            # bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e ]
+            bound_patch = sem[temp_v_s:temp_v_e, u_min:u_max]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
@@ -590,7 +591,8 @@ class RawSemAreaMatcher(object):
             offset = 0
             temp_v_s = max(0, v_min-radius)
             temp_v_e = min(H, v_min+radius)
-            bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e ]
+            # bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e ]
+            bound_patch = sem[temp_v_s:temp_v_e, u_min:u_max]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
             for k in temp_stas_dict.keys():
@@ -602,7 +604,8 @@ class RawSemAreaMatcher(object):
             offset = l
             temp_u_s = max(0, u_max-radius)
             temp_u_e = min(W, u_max+radius)
-            bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            # bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            bound_patch = sem[v_min:v_max, temp_u_s:temp_u_e]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
@@ -613,7 +616,8 @@ class RawSemAreaMatcher(object):
             offset = l
             temp_u_s = max(0, u_max-radius)
             temp_u_e = min(W, u_max+radius)
-            bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            # bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            bound_patch = sem[v_min:v_max, temp_u_s:temp_u_e]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
@@ -626,7 +630,8 @@ class RawSemAreaMatcher(object):
             offset = l*2
             temp_v_s = max(0, v_max-radius)
             temp_v_e = min(H, v_max+radius)
-            bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e]
+            # bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e]
+            bound_patch = sem[temp_v_s:temp_v_e, u_min:u_max]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
@@ -637,7 +642,8 @@ class RawSemAreaMatcher(object):
             offset = l*2
             temp_v_s = max(0, v_max-radius)
             temp_v_e = min(H, v_max+radius)
-            bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e]
+            # bound_patch = sem[u_min:u_max, temp_v_s:temp_v_e]
+            bound_patch = sem[temp_v_s:temp_v_e, u_min:u_max]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
@@ -650,7 +656,8 @@ class RawSemAreaMatcher(object):
             offset = l*3
             temp_u_s = max(0, u_min-radius)
             temp_u_e = min(H, u_min+radius)
-            bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            # bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            bound_patch = sem[v_min:v_max, temp_u_s:temp_u_e]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
@@ -661,7 +668,8 @@ class RawSemAreaMatcher(object):
             offset = l*3
             temp_u_s = max(0, u_min-radius)
             temp_u_e = min(H, u_min+radius)
-            bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            # bound_patch = sem[temp_u_s:temp_u_e, v_min:v_max]
+            bound_patch = sem[v_min:v_max, temp_u_s:temp_u_e]
             temp_patch = np.squeeze(bound_patch.reshape((-1,1))).tolist()
             temp_stas_dict = collections.Counter(temp_patch)
 
