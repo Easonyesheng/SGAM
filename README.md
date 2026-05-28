@@ -9,7 +9,7 @@
  * Copyright (c) 2024 by EasonZhang, All Rights Reserved. 
 -->
 # SGAM
-This is the the offical code release for the paper: `Searching from Area to Point: A Semantic Guided Framework  with Geometric Consistency for Accurate Feature Matching', by Yesheng Zhang and Xu Zhao and Dahong Qian.
+This is the the offical code release for the [paper](https://doi.org/10.1016/j.patcog.2026.113920): Searching from Area to Point: A Semantic Guided Framework  with Geometric Consistency for Accurate Feature Matching.
 
 **See also a refactored version [here](https://github.com/Easonyesheng/A2PM-MESA).**
 
@@ -123,11 +123,12 @@ Note the images in this case come from the training set of ASpanFormer, and SGAM
 If you find this code helpful, please cite:
 
 ``` txt
-@article{zhang2023searching,
-  title={Searching from Area to Point: A Hierarchical Framework for Semantic-Geometric Combined Feature Matching},
-  author={Zhang, Yesheng and Zhao, Xu and Qian, Dahong},
-  journal={arXiv preprint arXiv:2305.00194},
-  year={2023}
+@article{SGAM2026,
+  title={Searching from area to point: A semantic guided framework with geometric consistency for accurate feature matching},
+  author={Zhang, Yesheng and Zhao, Xu},
+  journal={Pattern Recognition},
+  pages={113920},
+  year={2026}
 }
 ```
 
